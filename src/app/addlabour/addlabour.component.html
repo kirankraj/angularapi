@@ -1,0 +1,155 @@
+<!-- <mat-card class="flex-p" fxLayoutAlign="space-between center">
+    <div>
+        <p style="color: red;">Site Address: <span style="color: black;">20 Corndale street loganholme, QLD-4219</span></p>
+    </div>
+    <div>
+        <p style="color: red;">Job Description: <span style="color: black;">A water fillimjj jgs jsgf kj</span></p>
+    </div>
+    <div>
+        <p style="color: red;">AVAI Hours: <span style="color: black;">-16.50</span></p>
+    </div>
+    <div>
+        <p style="color: red;">Job No: <span style="color: black;">Qld15600</span></p>
+    </div>
+</mat-card><br> -->
+<mat-card>
+    <mat-form-field [style.width.%]=30 class="p-1">
+        <input matInput placeholder="Met With">
+    </mat-form-field>&nbsp;
+    <mat-form-field [style.width.%]=30 class="p-1">
+        <input matInput placeholder="Cause Of Damage ">
+    </mat-form-field>&nbsp;
+    <mat-form-field [style.width.%]=30 class="p-1">
+        <input matInput placeholder="Water Type">
+    </mat-form-field>&nbsp;
+    <mat-form-field [style.width.%]=30 class="p-1">
+        <input matInput placeholder="Consistent With The Event">
+    </mat-form-field>&nbsp;
+    <mat-form-field [style.width.%]=30 class="p-1">
+        <input matInput placeholder="Number of Rooms affected">
+    </mat-form-field>&nbsp;
+    <mat-form-field [style.width.%]=30 class="p-1">
+        <input matInput placeholder="Type Of House">
+    </mat-form-field>&nbsp;
+    <mat-slide-toggle [style.width.%]=50>Has it been repaired</mat-slide-toggle>
+    <mat-slide-toggle [style.width.%]=50>Is Mould Visible</mat-slide-toggle>
+    <mat-slide-toggle [style.width.%]=50>Is a Builder </mat-slide-toggle>
+    <mat-slide-toggle [style.width.%]=50>Does it Makesafe</mat-slide-toggle>
+
+
+
+    <mat-form-field [style.width.%]=30 class="p-1">
+        <input matInput placeholder="Age Of Property(years)">
+    </mat-form-field>&nbsp;
+    <mat-form-field [style.width.%]=30 class="p-1">
+        <input matInput placeholder="Condition Of Property">
+    </mat-form-field>&nbsp;
+    <mat-form-field [style.width.%]=30 class="p-1">
+        <input matInput placeholder="Roof Type">
+    </mat-form-field>&nbsp;
+    <mat-form-field [style.width.%]=30 class="p-1">
+        <input matInput placeholder="Temprature">
+    </mat-form-field>&nbsp;
+
+
+
+    <mat-form-field [style.width.%]=30 class="p-1">
+        <input matInput placeholder="Dry Standard Moisture">
+    </mat-form-field>&nbsp;
+    <mat-form-field [style.width.%]=30 class="p-1">
+        <input matInput placeholder="Type Of Exterior">
+    </mat-form-field>&nbsp;
+    <mat-form-field [style.width.%]=30 class="p-1">
+        <input matInput placeholder="Humidity">
+    </mat-form-field>&nbsp;
+    <mat-form-field [style.width.%]=30 class="p-1">
+        <input matInput placeholder="Item">
+    </mat-form-field>&nbsp;
+    <div>
+        <button mat-raised-button class="m-1" (click)='close()' style="background-color: royalblue;color: white;"><mat-icon>camera_alt</mat-icon>Cause Of Damage</button>&nbsp;
+        <button mat-raised-button class="m-1" (click)='close()' style="background-color: red;color: white;"><mat-icon>camera_alt</mat-icon>Dry Standard</button>
+    </div>
+
+    <!-- <div fxLayoutAlign="space-between center"> -->
+    <!-- <div [style.width.%]=32 style="display: flex;" class="p-1 row wrap"> -->
+
+    <!-- </div> -->
+    <!-- <div [style.width.%]=32 style="display: flex;" class="p-1 row wrap"> -->
+
+    <!-- </div> -->
+
+    <!-- </div> -->
+
+
+</mat-card>
+
+<!-- <div style="border: 1px solid black;width: 98%;padding: 1%;display: flex;" class="p-1 row wrap">
+        <div [style.width.%]=32 class="p-1">
+            <h4 class="muted-text">Start Time</h4>
+            <mat-form-field [style.width.%]=33.3 class="p-1">
+                <mat-select placeholder="Hours">
+                    <mat-option *ngFor="let stat of Hr" [value]="stat">
+                        {{stat}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field [style.width.%]=33.3 class="p-1">
+                <mat-select placeholder="Minute">
+                    <mat-option *ngFor="let stat of Min" [value]="stat">
+                        {{stat}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field [style.width.%]=19.3 class="p-1">
+                <mat-select placeholder="AM / PM">
+                    <mat-option *ngFor="let stat of amPm" [value]="stat">
+                        {{stat}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div [style.width.%]=17 class="p-1">
+            <h4 class="muted-text">Meal Break Time</h4>
+            <mat-form-field class="p-1">
+                <mat-select placeholder="Minute">
+                    <mat-option *ngFor="let stat of Min" [value]="stat">
+                        {{stat}} mins
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div [style.width.%]=32 class="p-1">
+            <h4 class="muted-text">Finish Time</h4>
+            <mat-form-field [style.width.%]=33.3 class="p-1">
+                <mat-select placeholder="Hours">
+                    <mat-option *ngFor="let stat of Hr" [value]="stat">
+                        {{stat}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field [style.width.%]=33.3 class="p-1">
+                <mat-select placeholder="Minute">
+                    <mat-option *ngFor="let stat of Min" [value]="stat">
+                        {{stat}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field [style.width.%]=19.3 class="p-1">
+                <mat-select placeholder="AM / PM">
+                    <mat-option *ngFor="let stat of amPm" [value]="stat">
+                        {{stat}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div [style.width.%]=23 class="p-1">
+            <mat-form-field class="p-1">
+                <input matInput placeholder="Hours Worked" readonly>
+            </mat-form-field>
+        </div>
+    </div> -->
+<mat-dialog-actions align="end">
+    <button mat-raised-button class="m-1" (click)='close()' style="background-color: gray;">Cancel</button>
+    <!-- <button mat-raised-button class="m-1" (click)='storeData()' color="accent" [disabled]='!form.valid || form.value.wpcAuthorisedStatus == "authorised"'>Confirm</button> -->
+    <button mat-raised-button class="m-1" (click)='close()' style="background-color: lightgreen;">Next</button>
+</mat-dialog-actions>

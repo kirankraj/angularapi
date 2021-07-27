@@ -1,0 +1,258 @@
+<mat-tab-group>
+    <mat-tab label="EQUIPMENT-HIRE">
+        <br> 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <button class="install" mat-raised-button  style="background-color: rgb(47, 0, 255);color: white;" (click)="openAddlabour()">
+                    INSTALL
+                </button>
+                <button class="collect" mat-raised-button  style="background-color: rgb(47, 0, 255);color: white;" (click)="openAddlabour()">
+                  COLLECT
+                </button>
+            </div>
+        </div>
+    </div>    
+    </mat-tab>
+    <mat-tab label="CHARGABLE ALLOWANCE"> 
+        <br> 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <button mat-raised-button  style="background-color: rgb(47, 0, 255);color: white;" (click)="openAddlabour()">
+                        <mat-icon>add</mat-icon>
+                        ADD ALLOWANCE
+                    </button>
+                </div>
+            </div>
+        </div>        
+    </mat-tab>
+    <mat-tab label="FREIGHT"> 
+        <br> 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <button mat-raised-button  style="background-color: rgb(47, 0, 255);color: white;" (click)="openAddlabour()">
+                        <mat-icon>add</mat-icon>
+                        ADD FREIGHT 
+                    </button>
+                </div>
+            </div>
+        </div>        
+    </mat-tab>
+  </mat-tab-group>
+<br>
+<mat-tab-group>
+    <mat-tab label="List"> 
+        <div *ngFor="let item of obj ">
+            <div class="p-1"  style="background-color: rgb(195,16,47);" [style.width.%]=100 >
+                <p style="color: white;margin: 2px;">Date:{{ item.date }}</p>
+                <p style="color: white;margin: 2px;">Employee:{{ item.emp }}</p>
+            </div>
+            <div class="p-1" [style.width.%]=100 >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p style="color: red;">Item Type:<span style="color: black;">{{ item.allowanceType }}</span></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p style="color: red;">Quantity: <span style="color: black;">{{ item.quantity }}</span></p>
+                        </div>
+                        
+                    </div>
+                </div>            
+            </div>
+        </div>    
+    </mat-tab>
+    <mat-tab label="Details"> 
+        <mat-card class="flex-p">
+            <mat-form-field [style.width.%]=30 class="p-1">
+                <input matInput placeholder="Labour Type" required>
+            </mat-form-field>&nbsp;
+            <mat-form-field [style.width.%]=30 class="p-1">
+                <input matInput placeholder="Rate" required>
+            </mat-form-field>&nbsp;
+            <mat-form-field [style.width.%]=30 class="p-1">
+                <input matInput placeholder="Employee Name" required>
+            </mat-form-field>
+
+        </mat-card>    
+    </mat-tab>
+    
+  </mat-tab-group>
+
+
+<!-- <mat-tab-group>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <span>EQUIPMENT HIRE</span>
+        </ng-template>
+        <mat-card class="flex-p">
+            <mat-button-toggle-group #controls="matButtonToggleGroup" appearance="legacy">
+                <mat-button-toggle value="install" style="background-color: red;color: white;">
+                    <span>INSTALL</span>
+                </mat-button-toggle>&nbsp;
+                <mat-button-toggle value="collect" style="background-color: red;color: white;">
+                    <span>COLLECT</span>
+                </mat-button-toggle>
+            </mat-button-toggle-group> --> 
+            <!-- <mat-tab-group [(selectedIndex)]="tabIndex" (click)='checkIndex(tabIndex)'>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <mat-icon>list</mat-icon>
+                        <span>List</span>
+                    </ng-template>
+                    <div *ngFor="let item of obj ">
+                        <div class="p-1" style="background-color: blue;" [style.width.%]=100 fxLayoutAlign="space-between center">
+                            <p style="color: white;margin: 2px;">Date:{{ item.date }}</p>
+                            <p style="color: white;margin: 2px;">Employee:{{ item.emp }}</p>
+                        </div>
+                        <div class="p-1" [style.width.%]=100 fxLayoutAlign="space-between center">
+                            <p style="color: red;">Laber Type:<span style="color: black;">{{ item.laboutType }}</span></p>
+                            <p style="color: red;">Rate: <span style="color: black;">{{ item.quantity }}</span></p>
+                            <p style="color: red;">Hours Worked: <span style="color: black;">{{item.hourseWorked}}</span></p>
+                        </div>
+                    </div>
+                </mat-tab>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <mat-icon>list</mat-icon>
+                        <span>Details</span>
+                    </ng-template>
+                    <mat-card class="flex-p">
+                        <mat-form-field [style.width.%]=30 class="p-1">
+                            <input matInput placeholder="Labour Type" required>
+                        </mat-form-field>&nbsp;
+                        <mat-form-field [style.width.%]=30 class="p-1">
+                            <input matInput placeholder="Rate" required>
+                        </mat-form-field>&nbsp;
+                        <mat-form-field [style.width.%]=30 class="p-1">
+                            <input matInput placeholder="Employee Name" required>
+                        </mat-form-field>
+
+                    </mat-card>
+                </mat-tab>
+            </mat-tab-group>-->
+
+
+        <!-- </mat-card>
+    </mat-tab>  -->
+
+
+
+
+
+    <!-- <mat-tab>
+        <ng-template mat-tab-label>
+            <span>CHARGABLE ALLOWANCE</span>
+        </ng-template>
+        <mat-card class="flex-p">
+            <mat-button-toggle-group #controls="matButtonToggleGroup" appearance="legacy">
+                <mat-button-toggle value="add" (click)="openAddlabour()" style="background-color: red;color: white;">
+                    <mat-icon>add</mat-icon>
+                    <span>ADD ALLOWANCE</span>
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+            <mat-tab-group [(selectedIndex)]="tabIndex" (click)='checkIndex(tabIndex)'>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <mat-icon>list</mat-icon>
+                        <span>List</span>
+                    </ng-template>
+                    <div *ngFor="let item of obj ">
+                        <div class="p-1" style="background-color: royalblue;" [style.width.%]=100 fxLayoutAlign="space-between center">
+                            <p style="color: white;margin: 2px;">Date:{{ item.date }}</p>
+                            <p style="color: white;margin: 2px;">Employee:{{ item.emp }}</p>
+                        </div>
+                        <div class="p-1" [style.width.%]=100 fxLayoutAlign="space-between center">
+                            <p style="color: red;">Allowance Type:<span style="color: black;">{{ item.allowanceType }}</span></p>
+                            <p style="color: red;">Quantity: <span style="color: black;">{{ item.quantity }}</span></p>
+
+                        </div>
+                    </div>
+                </mat-tab>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <mat-icon>list</mat-icon>
+                        <span>Details</span>
+                    </ng-template>
+                    <mat-card class="flex-p">
+                        <mat-form-field [style.width.%]=30 class="p-1">
+                            <input matInput placeholder="Allowance Type" required>
+                        </mat-form-field>&nbsp;
+                        <mat-form-field [style.width.%]=30 class="p-1">
+                            <input matInput placeholder="Allowance Qty" required>
+                        </mat-form-field>&nbsp;
+                        <mat-form-field [style.width.%]=30 class="p-1">
+                            <input matInput placeholder="Employee Name" required>
+                        </mat-form-field>
+                        <div align="end">
+                            <button mat-raised-button class="p-1" (click)="close()" style="background-color: gray;">Cancel</button>&nbsp;
+                            <button mat-raised-button style="background-color:royalblue;" (click)="close()">Save</button>
+                        </div>
+
+                    </mat-card>
+                </mat-tab>
+            </mat-tab-group>
+
+
+        </mat-card>
+
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <span>FREIGHT</span>
+        </ng-template>
+        <mat-card class="flex-p">
+            <mat-button-toggle-group #controls="matButtonToggleGroup" appearance="legacy">
+                <mat-button-toggle value="add" (click)="openAddFreight()" style="background-color: red;color: white;">
+                    <mat-icon>add</mat-icon>
+                    <span>ADD FREIGHT</span>
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+            <mat-tab-group [(selectedIndex)]="tabIndex" (click)='checkIndex1(tabIndex)'>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <mat-icon>list</mat-icon>
+                        <span>List</span>
+                    </ng-template>
+                    <div *ngFor="let item of obj1 ">
+                        <div class="p-1" style="background-color: royalblue;" [style.width.%]=100 fxLayoutAlign="space-between center">
+                            <p style="color: white;margin: 2px;">Date:{{ item.date }}</p>
+                            <p style="color: white;margin: 2px;">FREIGHT Type:{{ item.type }}</p>
+                        </div>
+                        <div class="p-1" [style.width.%]=100 fxLayoutAlign="space-between center">
+                            <p style="color: red;">Freight Description: <span style="color: black;">{{ item.desc }}</span></p>
+                            <p style="color: red;">Quantity: <span style="color: black;">{{item.quntity}}</span></p>
+                        </div>
+                    </div>
+                </mat-tab>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <mat-icon>list</mat-icon>
+                        <span>Details</span>
+                    </ng-template>
+                    <mat-card class="flex-p">
+                        <mat-form-field [style.width.%]=30 class="p-1">
+                            <input matInput placeholder="Freight Type" required>
+                        </mat-form-field>&nbsp;
+                        <mat-form-field [style.width.%]=30 class="p-1">
+                            <input matInput placeholder="Freight Quantity" required>
+                        </mat-form-field>&nbsp;
+                        <mat-form-field [style.width.%]=30 class="p-1">
+                            <input matInput placeholder=" Description" required>
+                        </mat-form-field>
+
+                        <div align="end">
+                            <button mat-raised-button class="p-1" (click)="close1()" style="background-color: gray;">Cancel</button>&nbsp;
+                            <button mat-raised-button style="background-color:royalblue;" (click)="close1()">Save</button>
+                        </div>
+
+                    </mat-card>
+                </mat-tab>
+            </mat-tab-group>
+
+
+        </mat-card>
+    </mat-tab>
+</mat-tab-group> -->

@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="./assets/img/user.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+      Veniteck Solution
+    </a>
+    <button class="navbar-toggler" (click)="isCollapsed= !isCollapsed" data-toggle="collapse" [attr.aria-expanded]="isCollapsed" aria-controls="collapseExample">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="collapseExample" [ngbCollapse]="isCollapsed">
+        <ul class="navbar-nav ">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Switch Account</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Exit</a>
+            </li>
+        </ul>
+       
+    </div>
+  </nav>
+<div style="height: 30px;background-color:rgb(195,16,47)"></div>
+
+
+<div class="grand_parent">
+    <h2 style= "text-align: center; padding-top:15px ;">WORK LOAD</h2>
+    <div class="parents">
+        <div class="child">
+            <button id="button" type="button" mat-raised-button class="btn" (click)="jobsOpen()">Jobs</button>
+        </div>
+        <div class="child">
+            <button id="button" type="button" mat-raised-button class="btn"><a routerLink="jobs"></a>Quotations</button>
+        </div>
+        <div class="child">
+            <button id="button" type="button" mat-raised-button class="btn">Timesheets</button>
+        </div>
+        <div class="child">
+            <button id="button" type="button" mat-raised-button class="btn">My Equipments</button>
+        </div>
+    </div>
+</div>
+   <br>
+    <div class="grand_parent">
+        <h2 style= "text-align: center;">ADMIN</h2>
+        <div class="parents">
+            <div class="child">
+                <button id="button" type="button" mat-raised-button class="btn">Employees</button>
+            </div>
+            <div class="child">
+                <button id="button" type="button" mat-raised-button class="btn">Policies OK & S</button>
+            </div>
+            <div class="child">
+                <button id="button" type="button" mat-raised-button class="btn">On Call Roster</button>
+            </div>
+            <div class="child">
+                <button id="button" type="button" mat-raised-button class="btn">Print QR</button>
+            </div>
+        </div>
+    </div>
+    
+
+<footer class="footer navbar-fixed-bottom">
+   
+    <h3>OpsManager</h3>
+    <h3 align="end" style="color: rgb(3, 3, 3);">Version 1.25.555</h3>
+</footer>
+   

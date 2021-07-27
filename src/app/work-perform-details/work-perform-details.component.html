@@ -1,0 +1,114 @@
+<div class="container-fluid" style="background-color:rgb(195,16,47);">
+    <div class="row">
+        <div class="col">
+            <p style="color: rgb(255, 255, 255);">SITE ADDRESS: <span style="color: rgb(0, 0, 0);">Lorem ipsum dolor sit amet consecte.</span></p>
+        </div>
+        <div class="col">
+            <p style="color: rgb(255, 255, 255);">JOB DESCRIPTION: <span style="color: black;">Test 11 Version</span></p>
+        </div>
+        <div class="col">
+            <p style="color: rgb(255, 255, 255);">AVAI HOURS: <span style="color: black;">0.00</span></p>
+        </div>
+        <div class="col">
+            <p style="color: rgb(255, 255, 255);">JOB NO: <span style="color: black;">JND1115</span></p>
+        </div>
+        <div class="col button-col">
+            <button type="button" style="background-color: rgb(176,210,0); color: white;"  mat-raised-button>WP COMPLETE</button>
+        </div>
+        
+    </div>
+</div>
+
+<!-- <mat-card class="container-fluid">
+    <mat-card-content  style="background-color:rgb(195,16,47);" fxLayout="row wrap">
+        <p style="color: rgb(255, 255, 255);">SITE ADDRESS: <span style="color: rgb(0, 0, 0);">23 varsha kjsdh jhgsd jhgs 7275</span></p>
+        <p style="color: rgb(255, 255, 255);">JOB DESCRIPTION: <span style="color: black;">Test 11 Version</span></p>
+       <p style="color: rgb(255, 255, 255);">AVAI HOURS: <span style="color: black;">0.00</span></p>
+        <p style="color: rgb(255, 255, 255);">JOB NO: <span style="color: black;">JND1115</span></p>
+       
+        <div class="status">
+            <p style="color: rgb(45,62,80);">STATUS</p> -->
+            <!-- <button type="button" style="background-color: rgb(45,62,80); color: white;" [style.width.%]=100 mat-raised-button>WP COMPLETE</button>
+        </div>
+</mat-card-content>
+</mat-card><br> --> 
+<br>
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 ">
+            <mat-card >
+                <mat-card fxLayout="row wrap" fxLayoutAlign="space-between center">
+                    <mat-card class="card" style="background-color: rgb(45,62,80);" >
+                        <mat-card-content id="btn" >
+                            <p style="color: rgb(255, 0, 0);">Date Worked</p>
+                            <p style="color: rgb(255, 255, 255) "><span id="date">12/07/2021</span></p>
+                        </mat-card-content>
+                    </mat-card>
+                    <mat-card  class="card" style="background-color: rgb(45,62,80);">
+                        <mat-card-content id="btn" >
+                            <p style="color: rgb(255, 0, 0);">Arrival Time</p>
+                            <p style="color: rgb(255, 255, 255)">12:15 pm</p>
+        
+                        </mat-card-content>
+                    </mat-card>
+                    <mat-card class="card" style="background-color: rgb(45,62,80);" >
+                        <mat-card-content  >
+                            <p style="color: rgb(255, 0, 0);">Job Status</p>
+                            <p style="color: rgb(255, 253, 253)">Not Completed</p>
+        
+                        </mat-card-content>
+                    </mat-card>
+        
+                </mat-card>
+                <br>
+                <mat-card fxLayout="row wrap" style="background-color: rgb(45,62,80);">
+                    <p style="color: red;"><strong>These fields are locked and can only be edited from the individual room details
+                        screen</strong> </p>
+                </mat-card><br>
+                <mat-card fxLayout="row wrap" style="background-color: rgb(45,62,80);">
+                    <p style="color:red" [style.width.%]=100>Work Performed * </p>
+                    <p style="color:white"> work perform created from location</p>
+                </mat-card><br>
+                <mat-card fxLayout="row wrap" style="background-color: rgb(45,62,80);">
+                    <p style="color:red;" [style.width.%]=100>Site Reattendence * </p>
+                    <p style="color: rgb(255, 255, 255);">Site Re-Attendence</p>
+                </mat-card><br>
+                <mat-card fxLayout="row wrap" style="background-color: rgb(45,62,80);">
+                    <p style="color:red" [style.width.%]=100>Internal comments - office use only </p>
+                    <p style="color: rgb(255, 255, 255);"> work perform created from location</p>
+                </mat-card>
+        
+            </mat-card>
+            </div>
+        <div class="col-md-4">
+            <mat-card [style.height.%]=100>
+                <mat-card-content class="content" style="text-align: center;">
+                    <div>
+                        <button type="button" style="background-color: rgb(45,62,80); color: white; border-radius: 90px;" [style.width.%]=77 class="m-1" mat-raised-button><mat-icon>thumb_up</mat-icon>JSA</button>
+                    </div><br>
+                    <div>
+                        <button type="button" style="background-color: rgb(45,62,80); color: white; border-radius: 90px;" [style.width.%]=77 class="m-1" mat-raised-button><mat-icon>camera_enhance</mat-icon>ATTACHMENTS</button></div><br>
+                    <div>
+                        <button type="button" style="background-color: rgb(45,62,80); color: white; border-radius: 90px;" [style.width.%]=77 class="m-1" mat-raised-button (click)="opendialog()"><mat-icon>monetization_on</mat-icon>CONSTING</button>
+                    </div><br>
+                    <div>
+                        <button type="button" style="background-color: rgb(45,62,80); color: white; border-radius: 90px;" [style.width.%]=77 class="m-1" mat-raised-button (click)="openCrmForms()"><mat-icon> list_alt</mat-icon>CRS FORMS</button>
+                    </div><br>
+        
+                    <div>
+                        <button type="button" style="background-color: rgb(45,62,80); color: white; border-radius: 90px;" [style.width.%]=77 class="m-1" mat-raised-button><mat-icon>camera_enhance</mat-icon>ROOM PHOTOS</button>
+                    </div><br>
+                    <div>
+                        <button type="button" style="background-color: rgb(45,62,80); color: white; border-radius: 90px;" [style.width.%]=77 class="m-1" mat-raised-button><mat-icon>camera_enhance</mat-icon>ROOM</button>
+                    </div><br>
+                    <div>
+                        <button type="button" style="background-color: rgb(45,62,80); color: white; border-radius: 90px;" [style.width.%]=77 class="m-1" mat-raised-button (click)="openLocationDetails()"><mat-icon>thumb_up</mat-icon> LOCATION<span id="location"> DETAILS MUDMAP</span> </button>
+                    </div><br>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+

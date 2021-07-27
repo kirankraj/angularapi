@@ -1,0 +1,12 @@
+
+  @media only screen and (min-width: 324px){
+      .col-sm-12{
+          text-align: center;
+      }
+  }
+  @media only screen and (min-width: 1024px){
+      .p-1{
+        justify-content:space-between center;
+      }
+  }
+

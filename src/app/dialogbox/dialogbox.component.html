@@ -1,0 +1,18 @@
+<form class="form-control" #userPost = "ngForm" (ngSubmit)="onValidate(userPost.value)">
+  <div style="align-content:space-around;">
+    <h2>Validate OTP(One Time Passcode)</h2>
+    <p class="msg">Validate OTP(One Time Passcode)
+        A One Time Passcode has been send to {{this.data.email}}
+        
+        Please enter the OTP below to verify your EmailAddress. If you cannot see the email from "OPSManager" in your inbox, make sure to check the SPAM folder.</p>             
+      <mat-form-field [style.width.%]=100>
+          <input class="userotp" matInput placeholder="otp"  ngModel type="text" name="userotp" required>
+          <mat-error ng-show="form.userotp.$error.required">
+              Enter valid Otp
+          </mat-error>
+      </mat-form-field>
+  </div>
+  <mat-card-actions>
+      <button type="submit" mat-raised-button [style.width.%]=100  style="color: white;background-color: rgb(3, 184, 42);">verify</button>
+  </mat-card-actions>
+</form>

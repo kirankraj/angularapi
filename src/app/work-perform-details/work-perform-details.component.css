@@ -1,0 +1,44 @@
+/* @media (min-device-width: 768px) and (max-device-width: 1280px) { */
+    /* .btn { */
+        /* display: block; */
+        /* height: 40px; */
+        /* width: 55%; */
+        /* border-radius: 30%; */
+    /* } */
+/* } */
+.content{
+    padding-top: 70px;
+}
+@media only screen and (min-width: 360px){
+.card{
+    width: 30%;
+    height: 140px;
+}
+.button-col{
+    text-align: center;
+}
+#location{
+    display: none;
+} 
+.button-col button{
+    bottom: 10px;
+}
+
+}
+
+@media only screen and (min-width: 768px)and  (max-device-width: 1024px){
+ .content{
+     padding-top: 50px;
+ }
+   #location{
+       display: none;
+   } 
+   .button-col button{
+  top: 20px;
+}
+}
+@media only screen and (min-width: 1024px){
+    .button-col button{
+    top:6px;
+    }
+}

@@ -1,0 +1,8 @@
+@media only screen and (min-width: 324px){
+    .col-sm-12{
+        text-align: center;
+    }
+    .collect{
+        left: 35px;
+    }
+}

@@ -1,0 +1,199 @@
+<mat-tab-group>
+    <mat-tab label="EMPLOYEE-LABOUR">
+        <br> 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <button mat-raised-button  style="background-color: rgb(47, 0, 255);color: white;" (click)="openAddlabour()">
+                    <mat-icon>add</mat-icon>
+                    ADD LABOUR
+                </button>
+            </div>
+        </div>
+    </div>    
+    </mat-tab>
+    <mat-tab label="EMPLOYEE-LABOUR HIRE"> 
+        <br> 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <button mat-raised-button  style="background-color: rgb(47, 0, 255);color: white;" (click)="openAddlabour()">
+                        <mat-icon>add</mat-icon>
+                        ADD LABOUR-HIRE
+                    </button>
+                </div>
+            </div>
+        </div>        
+    </mat-tab>
+  </mat-tab-group>
+<br>
+  <mat-tab-group>
+    <mat-tab label="List"> 
+        <div *ngFor="let item of obj ">
+            <div class="p-1"  style="background-color: rgb(195,16,47);" [style.width.%]=100 >
+                <p style="color: white;margin: 2px;">Date:{{ item.date }}</p>
+                <p style="color: white;margin: 2px;">Employee:{{ item.emp }}</p>
+            </div>
+            <div class="p-1" [style.width.%]=100 >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p style="color: red;">Laber Type:<span style="color: black;">{{ item.laboutType }}</span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p style="color: red;">Rate: <span style="color: black;">{{ item.rate }}</span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p style="color: red;">Hours Worked: <span style="color: black;">{{item.hourseWorked}}</span></p>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>    
+    </mat-tab>
+    <mat-tab label="Details"> 
+        <mat-card class="flex-p">
+            <mat-form-field [style.width.%]=30 class="p-1">
+                <input matInput placeholder="Labour Type" required>
+            </mat-form-field>&nbsp;
+            <mat-form-field [style.width.%]=30 class="p-1">
+                <input matInput placeholder="Rate" required>
+            </mat-form-field>&nbsp;
+            <mat-form-field [style.width.%]=30 class="p-1">
+                <input matInput placeholder="Employee Name" required>
+            </mat-form-field>
+
+        </mat-card>    
+    </mat-tab>
+    
+  </mat-tab-group>
+
+
+
+<!-- <mat-tab-group >
+    <mat-tab>
+        <ng-template mat-tab-label class="label">
+            <span>EMPLOYEE - LABOUR</span>
+        </ng-template>
+        <mat-card class="flex-p">
+            <div id="btn">
+                <mat-button-toggle-group #controls="matButtonToggleGroup" appearance="legacy" style="text-align: center;">
+                    <mat-button-toggle  id="tabtn"  value="add" (click)="openAddlabour()" style="background-color: rgb(47, 0, 255);color: white;">
+                        <mat-icon>add</mat-icon>
+                        <span>ADD LABOUR</span>
+                    </mat-button-toggle>
+                </mat-button-toggle-group>
+            </div>
+            <br>
+            <br>
+            <mat-tab-group [(selectedIndex)]="tabIndex" (click)='checkIndex(tabIndex)'>
+                <mat-tab>
+                        <ng-template mat-tab-label>
+                            <mat-icon>list</mat-icon>
+                            <span>List</span>
+                        </ng-template>
+                    <div *ngFor="let item of obj ">
+                        <div class="p-1"  style="background-color: rgb(195,16,47);" [style.width.%]=100 fxLayoutAlign="space-between center">
+                            <p style="color: white;margin: 2px;">Date:{{ item.date }}</p>
+                            <p style="color: white;margin: 2px;">Employee:{{ item.emp }}</p>
+                        </div>
+                        <div class="p-1" [style.width.%]=100 fxLayoutAlign="space-between center">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p style="color: red;">Laber Type:<span style="color: black;">{{ item.laboutType }}</span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p style="color: red;">Rate: <span style="color: black;">{{ item.rate }}</span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p style="color: red;">Hours Worked: <span style="color: black;">{{item.hourseWorked}}</span></p>
+                                    </div>
+                                </div>
+                               
+                            </div>
+
+                            
+                            
+                        </div>
+                    </div>
+                </mat-tab>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <mat-icon>list</mat-icon>
+                        <span>Details</span>
+                    </ng-template>
+                    <mat-card class="flex-p">
+                        <mat-form-field [style.width.%]=30 class="p-1">
+                            <input matInput placeholder="Labour Type" required>
+                        </mat-form-field>&nbsp;
+                        <mat-form-field [style.width.%]=30 class="p-1">
+                            <input matInput placeholder="Rate" required>
+                        </mat-form-field>&nbsp;
+                        <mat-form-field [style.width.%]=30 class="p-1">
+                            <input matInput placeholder="Employee Name" required>
+                        </mat-form-field>
+
+                    </mat-card>
+                </mat-tab>
+            </mat-tab-group>
+
+
+        </mat-card>
+    </mat-tab>
+
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <span>EMPLOYEE - LABOUR HIRE</span>
+        </ng-template>
+        <mat-card class="flex-p">
+            <mat-button-toggle-group #controls="matButtonToggleGroup" appearance="legacy">
+                <mat-button-toggle value="add" (click)="openAddlabour()" style="background-color: red;color: white;">
+                    <mat-icon>add</mat-icon>
+                    <span>ADD LABOUR - HIRE</span>
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+            <br>
+            <mat-tab-group [(selectedIndex)]="tabIndex" (click)='checkIndex(tabIndex)'>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <mat-icon>list</mat-icon>
+                        <span>List</span>
+                    </ng-template>
+                    <div *ngFor="let item of obj ">
+                        <div class="p-1" style="background-color: royalblue;" [style.width.%]=100 fxLayoutAlign="space-between center">
+                            <p style="color: white;margin: 2px;">Date:{{ item.date }}</p>
+                            <p style="color: white;margin: 2px;">Employee:{{ item.emp }}</p>
+                        </div>
+                        <div class="p-1" [style.width.%]=100 fxLayoutAlign="space-between center">
+                            <p style="color: red;">Laber Type:<span style="color: black;">{{ item.laboutType }}</span></p>
+                            <p style="color: red;">Rate: <span style="color: black;">{{ item.rate }}</span></p>
+                            <p style="color: red;">Hours Worked: <span style="color: black;">{{item.hourseWorked}}</span></p>
+                        </div>
+                    </div>
+                </mat-tab>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <mat-icon>list</mat-icon>
+                        <span>Details</span>
+                    </ng-template>
+                    <mat-card class="flex-p">
+                        <mat-form-field [style.width.%]=30 class="p-1">
+                            <input matInput placeholder="Labour Type" required>
+                        </mat-form-field>&nbsp;
+                        <mat-form-field [style.width.%]=30 class="p-1">
+                            <input matInput placeholder="Rate" required>
+                        </mat-form-field>&nbsp;
+                        <mat-form-field [style.width.%]=30 class="p-1">
+                            <input matInput placeholder="Employee Name" required>
+                        </mat-form-field>
+
+                    </mat-card>
+                </mat-tab>
+            </mat-tab-group>
+
+
+        </mat-card>
+
+    </mat-tab>
+</mat-tab-group> -->

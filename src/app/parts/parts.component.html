@@ -1,0 +1,123 @@
+<div class="container" style="padding-top: 15px;">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <button mat-raised-button  style="background-color: rgb(47, 0, 255);color: white;"value="add" (click)="openAddlabour()">
+                <mat-icon>add</mat-icon>
+                ADD PARTS
+            </button>
+        </div>
+    </div>
+</div>    
+<mat-tab-group>
+    <mat-tab label="List"> 
+        <div *ngFor="let item of obj ">
+            <div class="p-1"  style="background-color: rgb(195,16,47);" [style.width.%]=100 >
+                <p style="color: white;margin: 2px;">Date:{{ item.date }}</p>
+                <p style="color: white;margin: 2px;">Type:{{ item.type }}</p>
+            </div>
+            <div class="p-1" [style.width.%]=100 >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p style="color: red;">part Type:<span style="color: black;">{{ item.partNo }}</span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p style="color: red;">Desc: <span style="color: black;">{{ item.desc }}</span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p style="color: red;">Quantity: <span style="color: black;">{{item.quntity}}</span></p>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>    
+    </mat-tab>
+    <mat-tab label="Details"> 
+        <mat-card class="flex-p">
+            <mat-form-field [style.width.%]=30 class="p-1">
+                <input matInput placeholder="Part Category" required>
+            </mat-form-field>&nbsp;
+            <mat-form-field [style.width.%]=30 class="p-1">
+                <input matInput placeholder="Part Number" required>
+            </mat-form-field>&nbsp;
+            <mat-form-field [style.width.%]=30 class="p-1">
+                <input matInput placeholder="Part Description" required>
+            </mat-form-field>
+
+        </mat-card>    
+    </mat-tab>
+    
+  </mat-tab-group>
+
+<!-- list and details -->
+
+  
+
+
+
+<!-- <mat-card class="flex-p">
+    <mat-button-toggle-group #controls="matButtonToggleGroup" appearance="legacy">
+        <mat-button-toggle value="add" (click)="openAddlabour()" style="background-color: red;color: white;">
+            <mat-icon>add</mat-icon>
+            <span>ADD PARTS</span>
+        </mat-button-toggle>
+    </mat-button-toggle-group>
+    <mat-tab-group [(selectedIndex)]="tabIndex" (click)='checkIndex(tabIndex)'>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon>list</mat-icon>
+                <span>List</span>
+            </ng-template>
+            <div *ngFor="let item of obj ">
+                <div class="p-1" style="background-color: royalblue;" [style.width.%]=100 fxLayoutAlign="space-between center">
+                    <p style="color: white;margin: 2px;">Date:{{ item.date }}</p>
+                    <p style="color: white;margin: 2px;">Type:{{ item.type }}</p>
+                </div>
+                <div class="p-1" [style.width.%]=100 fxLayoutAlign="space-between center">
+                    <p style="color: red;">Part No:<span style="color: black;">{{ item.partNo }}</span></p>
+                    <p style="color: red;">Part Description: <span style="color: black;">{{ item.desc }}</span></p>
+                    <p style="color: red;">Quantity: <span style="color: black;">{{item.quntity}}</span></p>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon>list</mat-icon>
+                <span>Details</span>
+            </ng-template>
+            <mat-card class="flex-p"> -->
+                <!-- <mat-form-field [style.width.%]=30 class="p-1">
+                    <mat-select placeholder="Part Category">
+                        <mat-option *ngFor="let stat of Category" [value]="stat">
+                            {{stat}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field [style.width.%]=30 class="p-1">
+                    <mat-select placeholder="Part Number">
+                        <mat-option *ngFor="let no of number" [value]="no">
+                            {{no}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field> -->
+                <!-- <mat-form-field [style.width.%]=30 class="p-1">
+                    <input matInput placeholder="Part Category">
+                </mat-form-field>&nbsp;
+                <mat-form-field [style.width.%]=30 class="p-1">
+                    <input matInput placeholder="Part Number" required>
+                </mat-form-field>&nbsp;
+                <mat-form-field [style.width.%]=30 class="p-1">
+                    <input matInput placeholder="Part Description" required>
+                </mat-form-field>
+
+                <div align="end">
+                    <button mat-raised-button class="p-1" (click)="close()" style="background-color: gray;">Cancel</button>&nbsp;
+                    <button mat-raised-button style="background-color:royalblue;" (click)="close()">Save</button>
+                </div>
+
+            </mat-card>
+        </mat-tab>
+    </mat-tab-group>
+
+
+</mat-card> -->

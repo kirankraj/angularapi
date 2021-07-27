@@ -1,0 +1,206 @@
+<header style="background-color: red; height: 30px;" fxLayout="row wrap" fxLayoutAlign="space-between center">
+    <h3 style="color: white;padding-top: 10px;">CRM Forms</h3>
+    <!-- <img src="/src/assets/img/logo_new" style="float:right; padding-top: 30px" width="280" height="60" alt="logo" /> -->
+</header>
+<div class="flex-p">
+    <mat-tab-group>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <span>MOISTURE CLEARANCE</span>
+            </ng-template>
+            <div [style.width.%]=100 align="end">
+                <mat-slide-toggle>Not Required</mat-slide-toggle>
+            </div>
+            <mat-card-title style="text-align: center;">CERTIFICATE OF MOISTURE CLEARENCE</mat-card-title>
+            <div style="text-align: center;">
+                client Name:<strong>Veniteck Test Client</strong><br> Site Name:<strong>Veniteck Test Site</strong><br> Site Address:<strong>23 Varsha DEVIOT ,TAS, 76278</strong>
+            </div><br>
+            <mat-card-content>
+                <div>
+                    <p style="text-align: center;">This is to Confirm that Cowan Restoration Services on its last site visit has taken Moisture readings in all area where it performed any type of dryying These areas have been returned back to the dry standard of the property.
+                    </p>
+                </div>
+                <div>
+                    <p style="text-align: center;">
+                        Cowan Restoration Services has treated all area which it has performed any works in with an anti-bacterial treatment using an industry standard chemical.
+                    </p>
+                </div>
+                <div>
+                    Customer Name :
+                    <mat-form-field class="p-1">
+                        <input matInput>
+                    </mat-form-field>
+                    Signature: <button mat-raised-button class="m-1">TAP TO SIGN</button>&nbsp; Not Required
+                    <mat-slide-toggle align="end"></mat-slide-toggle>
+                </div>
+                <p style="text-align: center;">WITNESSED BY (RESTORATION TECHNICIAN):</p>
+                <div>
+                    Employee Name :
+                    <mat-form-field class="p-1">
+                        <input matInput placeholder="Solution Veniteck" readonly>
+                    </mat-form-field>
+                    Signature: <button mat-raised-button class="m-1">TAP TO SIGN</button>
+                </div>
+
+
+
+            </mat-card-content>
+            <mat-dialog-actions align="end" style="padding: 10px;">
+                <button mat-raised-button class="p-1" style="background-color: gray;" (click)="close()">Cancel</button>&nbsp;
+            </mat-dialog-actions>
+        </mat-tab>
+
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <span>STATEMENT OF SATISFACTION</span>
+            </ng-template>
+            <div [style.width.%]=100 align="end">
+                <mat-slide-toggle>Not Required</mat-slide-toggle>
+            </div>
+            <mat-card-title style="text-align: center;">STATMENT OF SATISFACTION</mat-card-title>
+            <div style="text-align: center;">
+                client Name:<strong>Veniteck Test Client</strong><br> Site Name:<strong>Veniteck Test Site</strong><br> Site Address:<strong>23 Varsha DEVIOT ,TAS, 76278</strong>
+            </div><br>
+            <mat-card-content>
+                <p style="text-align: center;">To whom it may Concern,</p>
+                <div>
+                    <p style="text-align: center;">This is to certify that COWAN RESTORATION SERVICES has completed the work satisfactoryily at(address):</p>
+
+                </div>
+                <div>
+                    <p style="text-align: center;">
+                        I agree that COWAN RESTORATION SERVICES shuld be paid for the works perfrmed as they have met my standards and have completed the work required.
+                    </p>
+                    <p style="text-align: center;">
+                        I authorise the insurance campany to pay COWAN RESTORATION SERVICES directly for the service they have provided.
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    Comments :
+                    <mat-form-field [style.width.%]=47 class="p-1">
+                        <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="3" cdkAutosizeMaxRows="3" cdkAutosizeMinColumns="3" readonly> </textarea>
+                    </mat-form-field>
+                </div>
+                <div fxLayoutAlign="space-between center" [style.width.%]=90 style="text-align: center;">
+                    <div>
+                        Customer Name :
+                        <mat-form-field class="p-1">
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        Signed By: <button mat-raised-button class="m-1">TAP TO SIGN</button>
+                    </div>
+                    <div>
+                        <mat-form-field class="m-1">
+                            <mat-placeholder>Date </mat-placeholder>
+                            <input matInput type="date">
+                        </mat-form-field>
+
+                    </div>
+                </div>
+
+            </mat-card-content>
+            <mat-dialog-actions align="end" style="padding: 10px;">
+                <button mat-raised-button class="p-1" style="background-color: gray;" (click)="close()">Cancel</button>&nbsp;
+                <button mat-raised-button class="m-1" style="background-color:royalblue;">Save</button>
+            </mat-dialog-actions>
+
+        </mat-tab>
+
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <span>REMOVE FROM SITE</span>
+            </ng-template>
+            <div [style.width.%]=100 align="end">
+                <mat-slide-toggle>Not Required</mat-slide-toggle>
+            </div>
+            <mat-card-title style="text-align: center;">PERMISSION TO REMOVE FROM SITE</mat-card-title>
+            <div style="text-align: center;">
+                client Name:<strong>Veniteck Test Client</strong><br> Site Name:<strong>Veniteck Test Site</strong><br> Site Address:<strong>23 Varsha DEVIOT ,TAS, 76278</strong>
+            </div><br>
+            <mat-card-content>
+                <p style="text-align: center;">Give permission for COWAN RESTORATION SERVICES TECHNICIAN to remove damaged floor coverings/contents from my/our property for:</p>
+                <!-- <div style="text-align: center;" fxLayoutAlign="space-between center"> -->
+                <div style="text-align: center;">Assessment:
+                    <mat-slide-toggle></mat-slide-toggle>
+                </div>
+                <div style="text-align: center;"> Restoration:
+                    <mat-slide-toggle></mat-slide-toggle>
+                </div>
+                <div style="text-align: center;">Disposal:
+                    <mat-slide-toggle></mat-slide-toggle>
+                </div>
+                <p style="text-align: center;">
+                    I/We also agree if my claim is not accepted by the Insurer(depending upon policy conditions),</p>
+                <p style="text-align: center;">
+                    I/We take full resposibility for the replacement or restoration costs of my/our floor coverings/contents</p>
+                <!-- </div> -->
+                <div style="text-align: center;">
+                    Customer Name :
+                    <mat-form-field class="p-1">
+                        <input matInput>
+                    </mat-form-field>
+                    Signature: <button mat-raised-button class="m-1">TAP TO SIGN</button>&nbsp; Not Required
+                    <mat-slide-toggle align="end"></mat-slide-toggle>
+                </div>
+                <p style="text-align: center;">WITNESSED BY (RESTORATION TECHNICIAN):</p>
+                <div style="text-align: center;">
+                    Employee Name :
+                    <mat-form-field class="p-1">
+                        <input matInput placeholder="Solution Veniteck" readonly>
+                    </mat-form-field>
+                    Signature: <button mat-raised-button class="m-1">TAP TO SIGN</button>
+                </div>
+            </mat-card-content>
+
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <span>REQUEST TO LEAVE FLOOR</span>
+            </ng-template>
+            <div [style.width.%]=100 align="end">
+                <mat-slide-toggle>Not Required</mat-slide-toggle>
+            </div>
+            <mat-card-title style="text-align: center;">REQUEST TO LEAVE FLOOR COVERINGS/CONTENTS ONSITE</mat-card-title>
+            <div style="text-align: center;">
+                client Name:<strong>Veniteck Test Client</strong><br> Site Name:<strong>Veniteck Test Site</strong><br> Site Address:<strong>23 Varsha DEVIOT ,TAS, 76278</strong>
+            </div><br>
+            <mat-card-content>
+                <p style="text-align: center;">
+                    Confirm that I/We have asked COWAN RESTORATION SERVICES TECHNICIAN to leave the damage/affected floor coverings/contents at my/our property</p>
+                <p style="text-align: center;">I/We understand that these items(tick as appropriate)</p>
+                <div style="text-align: center;">Are not restorable:
+                    <mat-slide-toggle></mat-slide-toggle>
+                </div>
+                <div style="text-align: center;">May be health/safty hazard:
+                    <mat-slide-toggle></mat-slide-toggle>
+                </div>
+                <div style="text-align: center;">
+                    Customer Name :
+                    <mat-form-field class="p-1">
+                        <input matInput>
+                    </mat-form-field>
+                    Signature: <button mat-raised-button class="m-1">TAP TO SIGN</button>&nbsp; Not Required
+                    <mat-slide-toggle align="end"></mat-slide-toggle>
+                </div>
+                <p style="text-align: center;">WITNESSED BY (RESTORATION TECHNICIAN):</p>
+                <div style="text-align: center;">
+                    Employee Name :
+                    <mat-form-field class="p-1">
+                        <input matInput placeholder="Solution Veniteck" readonly>
+                    </mat-form-field>
+                    Signature: <button mat-raised-button class="m-1">TAP TO SIGN</button>
+                </div>
+            </mat-card-content>
+            <mat-dialog-actions align="end" style="padding: 10px;">
+                <button mat-raised-button class="p-1" style="background-color: gray;" (click)="close()">Cancel</button>&nbsp;
+                <button mat-raised-button class="m-1" style="background-color:royalblue;">Save</button>
+            </mat-dialog-actions>
+
+        </mat-tab>
+    </mat-tab-group>
+</div>

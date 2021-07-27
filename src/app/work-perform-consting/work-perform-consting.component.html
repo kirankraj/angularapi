@@ -1,0 +1,40 @@
+<header style="background-color: rgb(195,16,47); height: 30px;" fxLayout="row wrap" fxLayoutAlign="space-between center">
+    <h3 style="color: white;padding-top: 10px;">WORK PERFORM COSTING</h3>
+    <!-- <img src="./assets/img/logo_new.png" style="float:right;" width="40" alt="logo" /> -->
+    <button mat-icon-button class="close-button" [mat-dialog-close]="true">
+        <mat-icon class="close-icon" color="black">close</mat-icon>
+      </button>
+
+</header>
+
+<mat-tab-group>
+    <mat-tab label="LABOUR"><app-labur></app-labur> </mat-tab>
+    <mat-tab label="PARTS"><app-parts></app-parts> </mat-tab>
+    <mat-tab label="EQUIPMENTS"><app-equipments></app-equipments></mat-tab>
+  </mat-tab-group>
+<!-- <div class="flex-p">
+    <mat-tab-group>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <span>LABOUR</span>
+            </ng-template>
+           
+        </mat-tab>
+
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <span>PARTS</span>
+            </ng-template>
+            <app-parts></app-parts>
+        </mat-tab>
+
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <span>EQUIPMENTS</span>
+            </ng-template>
+            <app-equipments></app-equipments>
+        </mat-tab>
+    </mat-tab-group>
+</div> -->

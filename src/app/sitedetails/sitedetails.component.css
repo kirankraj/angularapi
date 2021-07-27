@@ -1,0 +1,67 @@
+
+.grand_parent{ width: 100vw; 
+}
+
+ .parents{ 
+     padding-top: 50px;
+     width: auto; height: auto; margin: auto;
+     display: flex;  justify-content: space-around;
+     flex-wrap: wrap; transition: all 0.2 linear;
+ }
+ .btn {
+    height: 40px;
+    font-size: 10px;
+    font-weight: bold;
+}
+mat-card.card{
+    background-color:rgb(45,62,80)
+}
+ section.my-row{
+     height: 100%;
+     width: 100%;
+   
+ }
+.mat-card-header .mat-card-title{
+    padding-top: 12px;
+    font-size: 15px; 
+}
+.container-fluid{
+    background-color: rgb(195,16,47);
+}
+.container{
+    padding-bottom: 30px;
+
+}
+
+@media only screen and (min-device-width: 320px){
+    section{
+        height: 150px;
+    }
+ /* .my-col{
+    padding: 20px;
+ } */
+ 
+ .my-row{
+     
+    row-gap: 15px;
+ }
+.parents{
+    row-gap: 15px;
+}
+#button{
+    font-size: 14px;
+    color: white;
+    background-color: rgb(45,62,80);
+    word-break: break-all
+}
+
+}
+@media screen and (min-width: 1024px) {
+    section{
+        height: 155px;
+    }
+    .container-fluid{
+       text-align: center;
+    }
+}
+  

@@ -1,0 +1,91 @@
+<nav class="navigation  ">
+    <ul class="nav d-flex justify-content-between">
+        <li class="left"> <button class="btn" id="btnrefresh" type="button" mat-raised-button style="left: 15px;color: white;background-color: rgb(97, 95, 95);text-align: center;">
+            <span class="material-icons">sync</span>
+            <span id="btn-text">Refresh</span></button></li>
+           <li> <h1 style="color: white;">JOBS</h1></li>
+           <li class="right"> <button  class="btn" id="btnback" type="button" (click)="back()" mat-raised-button style="color: white;background-color: rgb(97, 95, 95);text-align: center;">
+            <span class="material-icons">arrow_back</span>
+            <span id="btn-text">BACK</span></button></li>
+    </ul>
+</nav>  
+
+<div class="col-md-12 d-flex justify-content-center">
+    <mat-form-field appearance="outline" style="top: 12px;">
+        <input placeholder="Choose a date"  matInput [matDatepicker]="myDatePicker">
+        <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker></mat-datepicker>
+    </mat-form-field>
+</div>
+ <div style="height: 30px;background-color: rgb(195,16,47)"></div>
+ <br>
+<section class="main" style="padding-bottom: 15px;">
+    <mat-card class="outline" style="background-color: rgb(45,62,80);" *ngFor="let job of jobDetails" >
+        <div fxLayout="row wrap" fxLayoutAlign="space-between center"  >
+            <p style="color: rgb(255, 255, 255);"><strong>Job No:{{job.jdJobNumber}}</strong> </p>
+
+            <p style="color: rgb(255, 255, 255);"><strong>Scheduled Date and Time:</strong>{{job.jdSiteNameAndAddressText}}</p>
+        </div>
+
+        <hr style="border: px solid black;">
+        <mat-card-content>
+            <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+                <p style="color: rgb(255, 255, 255);"><strong>Address:</strong>{{job.jdSiteNameAndAddressText}}</p>
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+                <p style="color: rgb(255, 255, 255);"><strong>Description:</strong>{{job.jdJobDescription}} </p>
+                <a id="view" (click)="jobList()" mat-menu-item style="align-self: flex-end;">View Details</a>
+            </div>
+        </mat-card-content>
+    </mat-card>
+<!-- </mat-card> -->
+ <br>   
+<!-- <mat-card  class="outline"> -->
+    <!-- <mat-card class="outline" style="background-color: rgb(45,62,80);">
+        <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+            <p style="color: rgb(255, 254, 254);"><strong>Job No:JBN 0001</strong> </p>
+            <p style="color: rgb(255, 255, 255);"><strong>Scheduled Date and Time: 14/09/2021 5:45 pm</strong></p>
+        </div>
+        <hr style="border: 1px solid black;">
+        <mat-card-content>
+            <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+                <p style="color: rgb(255, 255, 255);"><strong>Address:</strong> 51 Sukh Sagar D Ns patKar Marg,</p>
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+                <p style="color: rgb(255, 255, 255);"><strong>Description:</strong>These elements primary serve as pre-styled content containers without any additional APIs. </p>
+                <a id="view"  (click)="jobList()" mat-menu-item style="align-self: flex-end;">View Details</a>
+            </div>
+        </mat-card-content>
+    </mat-card> -->
+<!-- </mat-card> -->
+<br>
+   
+
+<!-- <mat-card class="outline"> -->
+    <!-- <mat-card class="outline" style="background-color: rgb(45,62,80);">
+        <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+            <p style="color: rgb(255, 255, 255);"><strong>Job No:JBN 0001</strong> </p>
+            <p style="color: rgb(255, 255, 255);"><strong>Scheduled Date and Time: 14/09/2021 5:45 pm</strong></p>
+        </div>
+        <hr style="border: 1px solid black;">
+        <mat-card-content>
+            <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+                <p style="color: rgb(255, 255, 255);"><strong>Address:</strong> 51 Sukh Sagar D Ns patKar Marg,</p>
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+                <p style="color: rgb(255, 255, 255);"><strong>Description:</strong>These elements primary serve as pre-styled content containers without any additional APIs. </p>
+                <a id="view"  (click)="jobList()" mat-menu-item style="align-self: flex-end;">View Details</a>
+            </div>
+        </mat-card-content>
+    </mat-card> -->
+</section>
+
+
+<!-- <section> -->
+    <footer class="footer navbar-fixed-bottom">
+        <!-- Your page footer here... -->
+        <h3>OpsManager</h3>
+        <h3 align="end" style="color: red;">Version 1.25.555</h3>
+    </footer>
+<!-- </section> -->
+   
